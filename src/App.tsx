@@ -9,7 +9,7 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <Router>
+    <HashRouter>
       <div className="bg-gray-50 min-h-screen">
         <Navbar />
         <Routes>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
