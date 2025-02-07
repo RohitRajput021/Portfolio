@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 20px) scale(1.05);
+  }
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+} */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Section Header */
+h1,
+h2 {
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Buttons */
+button,
+a {
+  font-size: 14px;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary Button */
+button.primary,
+a.primary {
+  background: linear-gradient(135deg, #4caf50, #388e3c);
+  color: white;
+}
+
+button.primary:hover,
+a.primary:hover {
+  background: linear-gradient(135deg, #388e3c, #4caf50);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Secondary Button */
+button.secondary,
+a.secondary {
+  background: linear-gradient(135deg, #607d8b, #455a64);
+  color: white;
+}
+
+button.secondary:hover,
+a.secondary:hover {
+  background: linear-gradient(135deg, #455a64, #607d8b);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Section Button */
+button.skill,
+a.skill {
+  background: linear-gradient(135deg, #38b2ac, #319795);
+  color: white;
+}
+
+button.skill:hover,
+a.skill:hover {
+  background: linear-gradient(135deg, #319795, #38b2ac);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Skill Bars */
+.skill-bar {
+  background-color: #ddd;
+  height: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+  width: 100%;
+  position: relative;
+}
+
+.skill-bar .fill {
+  height: 100%;
+  border-radius: 5px;
+  width: 0;
+  transition: width 2s ease-out, background-color 0.3s ease;
+}
+
+.skill-bar .fill.high {
+  background-color: #38b2ac;
+}
+
+.skill-bar .fill.medium {
+  background-color: #48bb78;
+}
+
+.skill-bar .fill.low {
+  background-color: #e53e3e;
+}
+
+/* Skill Card Layout */
+.skill-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 220px;
+  margin: 20px;
+  position: relative;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons inside Skill Cards */
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Skill Container */
+.skills-section {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+/* Section Specific Buttons */
+.contact-button {
+  background: linear-gradient(
+    135deg,
+    #ff6347,
+    #e53e3e
+  ); /* Tomato Red for Contact */
+  color: white;
+}
+
+.contact-button:hover {
+  background: linear-gradient(135deg, #e53e3e, #ff6347); /* Dark Red */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.project-button {
+  background: linear-gradient(
+    135deg,
+    #f39c12,
+    #e67e22
+  ); /* Golden color for projects */
+  color: white;
+}
+
+.project-button:hover {
+  background: linear-gradient(135deg, #e67e22, #f39c12); /* Darker Orange */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-card {
+    width: 90%;
+  }
+
+  .contact-button,
+  .project-button {
+    width: 100%;
+  }
+}
